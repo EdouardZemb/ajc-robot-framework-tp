@@ -16,3 +16,8 @@ Read JSON File
     ${content}=    Get File    ${file_path}
     ${parsed_json}=    Evaluate    json.loads('''${content}''')    json
     RETURN    ${parsed_json}
+
+Open And Maximize Browser To ${url}
+    Open Browser    ${url}    Chrome
+    Maximize Browser Window
+

@@ -4,6 +4,7 @@ Library           String
 Library    DateTime
 Library           OperatingSystem
 Resource    Utilities.robot
+Suite Teardown    Close Browser
 
 *** Variables ***
 ${LOGIN_URL}      https://jpetstore.aspectran.com/account/signonForm
@@ -12,8 +13,7 @@ ${VALID_PASSWORD}       toto_password
 
 *** Keywords ***
 Open And Maximize Browser To Login Page
-    Open Browser    ${LOGIN_URL}    Chrome
-    Maximize Browser Window
+    Open And Maximize Browser To ${LOGIN_URL}
 
 *** Test Cases ***
 Example of how to load JSON
@@ -25,11 +25,9 @@ Login Test
     Open And Maximize Browser To Login Page
     Fill And Submit Login Form    ${username}    ${VALID_PASSWORD}
     Wait Until Page Contains    Welcome, ${username}
-    Close Browser
 
 Invalid Login Test
     Open And Maximize Browser To Login Page
     Fill And Submit Login Form    invalid_username    invalid_password
     Wait Until Page Contains    Invalid username or password
-    Close Browser
 
