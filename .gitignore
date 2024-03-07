@@ -1,0 +1,40 @@
+# Ignore JetBrains IDE project files
+.idea/
+
+# Ignore virtual environment
+.venv/
+
+# Ignore log files
+log/
+
+# Ignore any compiled Python files
+*.pyc
+
+# Ignore any cached files or directories
+__pycache__/
+
+# Ignore any generated results or outputs
+Results/
+
+# Ignore any large or binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore any temporary files or editor backups
+*~
+*.swp
+*.swo
+*.bak
+
+# Ignore any sensitive or local configuration files
+config.ini
+
+# Ignore any local database files
+*.db
+*.sqlite
+
+# Ignore any system-specific or environment-specific files
+.DS_Store
+Thumbs.db
